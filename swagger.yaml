@@ -13,19 +13,20 @@ info:
   version: 1.0.0
 basePath: /
 schemes:
-  - http
+  - https
 consumes:
   - application/json
 produces:
   - application/json
+securityDefinitions:
+  token:
+    type: basic
 paths:
   /:
     get:
       description: Returns \"hello, world\" message.
-      produces:
-        - application/json
       responses:
-        '200':
+        200:
           description: A \"hello, world\" message.
           schema:
             $ref: '#/definitions/Message'
@@ -37,6 +38,18 @@ paths:
           description: Token
           schema:
             $ref: '#/definitions/Token'
+  /secure:
+    get:
+      security:
+        - token: []
+      description: Returns a secure message.
+      responses:
+        200:
+          description: A \"hello, world\" message.
+          schema:
+            $ref: '#/definitions/Message'
+        401:
+          description: Not authenticated.
 definitions:
   Message:
     required:
