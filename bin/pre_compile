@@ -1,4 +1,2 @@
 #!/bin/bash
-
-apt-get update
 apt-get install -y apt-utils uuid-dev
