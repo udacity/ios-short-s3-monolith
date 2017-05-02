@@ -1,0 +1,56 @@
+swagger: "2.0"
+info:
+  title: "Lesson 1: Monolith Service"
+  description: A monolith service handling authentication and simple messagaging endpoints.
+  termsOfService: https://www.udacity.com/legal
+  contact:
+    name: Jarrod Parkes
+    url: http://jarrodparkes.com
+    email: jarrod@udacity.com
+  license:
+    name: MIT
+    url: https://github.com/udacity/ios-short-s3-monolith/blob/master/LICENSE
+  version: 1.0.0
+basePath: /
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /:
+    get:
+      description: Returns \"hello, world\" message.
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: A \"hello, world\" message.
+          schema:
+            $ref: '#/definitions/Message'
+  /login:
+    get:
+      description: Returns a token to be used for accessing the monolith's secure endpoints.
+      responses:
+        200:
+          description: Token
+          schema:
+            $ref: '#/definitions/Token'
+definitions:
+  Message:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+    example: 
+      message: Hello world!
+  Token:
+    required:
+      - token
+    properties:
+      token:
+        type: string
+    example:
+      token: asdfadsflkjewrlkjsdal;jxc21335
