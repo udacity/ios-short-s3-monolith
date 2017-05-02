@@ -1,7 +1,7 @@
 swagger: "2.0"
 info:
-  title: "Lesson 1: Monolith Service"
-  description: A monolith service handling authentication and simple messagaging endpoints.
+  title: "Lesson 1: Monolith"
+  description: A monolith application for simple messages.
   termsOfService: https://www.udacity.com/legal
   contact:
     name: Jarrod Parkes
