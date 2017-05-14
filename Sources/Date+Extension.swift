@@ -1,7 +1,6 @@
 import Foundation
 
 extension Date {
-
     func append(months: Int) -> Date {
         var dc = DateComponents()
         dc.month = months

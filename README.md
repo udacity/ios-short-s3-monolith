@@ -40,14 +40,14 @@ docker run -it -v $(pwd):/app -p 8080:8080 s3-monolith:1.0.0 /bin/bash
 **3] Build the Monolith**
 
 ```bash
-cd /app
+# assuming you are located at /app
 swift build
 ```
 
 **4] Run the Monolith**
 
 ```bash
-cd /app
+# assuming you are located at /app
 .build/debug/monolith
 ```
 
