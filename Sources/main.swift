@@ -86,7 +86,7 @@ class RequestLogger: RouterMiddleware {
 // Create a new router
 let router = Router()
 
-// Setup secure routes
+// Setup routes
 router.all("/*", middleware: RequestLogger())
 router.all("/login", middleware: credentials)
 router.all("/secure", middleware: jwtMiddleware)
