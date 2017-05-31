@@ -71,6 +71,7 @@ class JWTMiddleware: RouterMiddleware {
         } else {
             Log.error("no authorization header")
         }
+        sendAuthFailed()
     }
 }
 let jwtMiddleware = JWTMiddleware()
