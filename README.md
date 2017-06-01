@@ -34,7 +34,7 @@ docker build -t s3-monolith:1.0.0 .
 **2] Run the Docker Image (start Bash shell)**
 
 ```bash
-docker run -rm -it -v $(pwd):/app -p 8080:8080 s3-monolith:1.0.0 /bin/bash
+docker run --rm -it -v $(pwd):/app -p 8080:8080 s3-monolith:1.0.0 /bin/bash
 ```
 
 **3] Build the Monolith**
